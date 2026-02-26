@@ -1,0 +1,32 @@
+  {% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "{%static 'main/css/bootstrap.min.css' %}">
+</head>
+<body>
+  
+
+{% block content %}
+<div style="background-color: lightblue; height: 300px; display: flex; justify-content: center; align-items: center;">
+    <h1 style="color: white;">Welcome to Django Application</h1>
+</div>
+<div class="container">
+    <div class="row bg-primary">row1</div>
+    <div class="row bg-secondary">
+        <div class="col-md-4 bg-success">c-1</div>
+        <div class="col-md-4 bg-info">c-2</div>
+        <div class="col-md-4 bg-danger">c-3</div>
+        row2
+    </div>
+    <div class="row bg-success">row3</div>
+    <div class="row bg-danger">row4</div>
+</div>
+{% endblock %}
+<script src = "{% static 'main/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
